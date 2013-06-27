@@ -23,6 +23,24 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.2.2</version>
+                <configuration>
+                    <branchName>box</branchName>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <updateVersionsToSnapshot>true</updateVersionsToSnapshot>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <updateVersionsToSnapshot>true</updateVersionsToSnapshot>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
                 <executions>
                     <execution>
@@ -96,5 +114,12 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-    
+
+    <scm>
+        <connection>scm:git:git@github.com:nikelin/gwtp-generator-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:nikelin/gwtp-generator-plugin.git</developerConnection>
+        <url>http://somerepository.com/view.cvs</url>
+    </scm>
+
+
 </project>
